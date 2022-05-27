@@ -460,6 +460,7 @@ body {
 body .login-body {
   width: 600px;
   min-width: 260px;
+  background-color: #fff;
   border-radius: 25px;
   z-index: 90;
 }
