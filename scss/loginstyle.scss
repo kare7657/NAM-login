@@ -33,6 +33,7 @@ body {
     flex-wrap: wrap;
     @include mobile-L {
         height: auto;
+        min-height: 100vh;
         overflow: unset;
     }
     @include mobile-XS() {
@@ -280,6 +281,7 @@ body {
         font-weight: normal;
         text-align: center;
         z-index: 90;
+        bottom: 0;
         @include web-XL {
             margin-top: $margin-XS;
         }

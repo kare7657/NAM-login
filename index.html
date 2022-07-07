@@ -5,18 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAM EIP</title>
-    <!-- Theme style -->
-    <link rel="stylesheet" href="scss/adminlte.min.css">
     <!-- JQ UI -->
     <link rel="stylesheet" href="scss/jquery-ui.css" />
-
+    <!-- Theme style -->
+    <link rel="stylesheet" href="scss/adminlte.min.css">
+    <!-- css -->
     <link rel="stylesheet" href="scss/loginstyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 
     <style>
         body {
             background-image: url("../img/bgimg.jpg");
             background-position: center bottom;
+        }
+
+        body .login-body {
+            background-color: unset !important;
+        }
+
+        body footer p {
+            color: black !important;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            letter-spacing: 6px;
+            font-weight: normal;
+        }
+
+        h4 {
+            width: 100%;
+            text-align: center;
+            font-size: 1.625rem;
+        }
+
+        body .login-body .login-group {
+            padding-top: 1.875rem;
+        }
+
+        body .login-body .login-group .login-top .logo {
+            margin-bottom: 12px
+        }
+
+        body .login-body .login-group .login-top {
+            margin-bottom: 8px;
+        }
+
+        body .login-body .login-group .login-bot .code-gp {
+            margin-bottom: 12px;
+        }
+
+        body .login-body .login-group .login-bot .btn-gp .btn {
+            margin-top: 0;
         }
 
         @media (max-width:1024px) {
@@ -35,14 +74,11 @@
             body {
                 background-image: url("../img/bgimg-568.jpg");
             }
-        }
 
-        body .login-body {
-            background-color: unset !important;
-        }
-
-        body footer p {
-            color: black !important;
+            h1 {
+                font-size: 2.125rem;
+                letter-spacing: 3px;
+            }
         }
     </style>
 </head>
@@ -52,7 +88,7 @@
         <div class="login-group">
             <div class="login-top">
                 <img src="img/logo.png" alt="logo" class="logo">
-                <h1>內部資訊系統</h1>
+                <h1>員工資訊入口網</h1>
             </div>
             <div class="tab">
                 <h4>登入方式</h4>

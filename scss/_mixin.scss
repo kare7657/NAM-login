@@ -36,7 +36,7 @@
 }
 // 通用
 @mixin all() {
-    font-family: "微軟正黑體" !important;
+    font-family: "微軟正黑體" ;
     box-sizing: border-box !important;
 
     h1 {
@@ -45,6 +45,7 @@
         letter-spacing: 0.7px;
         padding: 0;
         margin: 0;
+        font-weight: normal ;
     }
     h2 {
         font-size: $size-h2;
@@ -65,6 +66,9 @@
         color: $text;
         padding: 0;
         margin: 0;
+        font-weight: normal !important;
+        color: black;
+        margin-bottom: $padding-XXS;
     }
     p {
         font-size: $size-p;
@@ -140,8 +144,6 @@
         font-weight: bold;
         @include mobile-L() {
             width: 30%;
-            margin: $margin-XS/1.5 0;
-            margin-bottom: $margin-XS/2.5;
         }
     }
     input {
