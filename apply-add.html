@@ -13,6 +13,8 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="scss/select2.min.css">
     <link rel="stylesheet" href="scss/select2-bootstrap4.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
     <!-- css -->
     <link rel="stylesheet" href="scss/loginstyle.css">
 
@@ -258,9 +260,12 @@
                 </div>
                 <div class="form-submit">
                     <div class="btn-gp">
+
                         <button type="submit" class="btn" onclick="javascript:location.href=''">儲存</button>
                         <button type="button" class="btn"
                             onclick="javascript:location.href='apply-view.html'">回上一頁</button>
+                        <button type="button" class="btn" data-toggle="modal"
+                            data-target="#modalChangPWD">modal</button>
                     </div>
                 </div>
             </form>
@@ -269,16 +274,68 @@
 
     </section>
 
+    <!-- modal -->
+    <div class="modal fade modal-template" id="modalChangPWD" tabindex="-1" role="dialog"
+        aria-labelledby="modalPrivateLabel" data-backdrop="static" style=" padding-top: 0;">
+        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        class="glyphicon glyphicon-remove" aria-hidden="true"></span></button> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h2 class="modal-title" id="modalPrivateLabel">變更密碼</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-gp">
+                            <label for="account">帳號<span class="notice">*</span></label>
+                            <input type="password" name="account" id="account" value="">
+                            <div class="text">
+                                <p class="notice">testtesttesttest</p>
+                            </div>
+                        </div>
+                        <div class="form-gp">
+                            <label for="email">信箱<span class="notice">*</span></label>
+                            <input type="text" name="email" id="email" value="">
+                            <div class="text">
+                                <p class="notice">testtesttesttest</p>
+                            </div>
+                        </div>
+                        <div class="code-gp">
+                            <label for="code">驗證碼</label>
+                            <div class="text-gp">
+                                <input class="code" type="text" name="code" id="code">
+                                <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
+                                <a href=""><img class="reform" src="img/redo.svg" alt="重整"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="go" id="go">確認更改</button>
+                        <button type="button" name="cancel" id="cancel" data-dismiss="modal">取消</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <!-- jQuery 日期選擇器-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.1.10.2.min.js"></script>
     <!-- InputMask 限制輸入格式-->
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.inputmask.bundle.js"></script>
-    <!-- Select2 -->
-    <script src="js/select2.full.min.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
 
     <!-- Select2 -->
+    <script src="js/select2.full.min.js"></script>
     <script>
         $(function () {
             //Initialize Elements

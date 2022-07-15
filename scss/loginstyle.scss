@@ -5,9 +5,16 @@
 * {
     @include all();
 }
+html {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    // @include mobile-L {
+    //     overflow-x: hidden;
+    // }
+}
 body.modal-open {
     padding-right: 0px !important;
-    overflow-y: auto;
 }
 .bk-mask {
     width: 100%;
@@ -19,7 +26,7 @@ body.modal-open {
 }
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-size: $size-p;
@@ -31,10 +38,12 @@ body {
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
+    position: relative !important;
+    overflow-y: auto;
+    overflow-x: hidden;
     @include mobile-L {
-        height: auto;
-        min-height: 100vh;
-        overflow: unset;
+        min-height: unset;
+        height: 100vh;
     }
     @include mobile-XS() {
         font-size: 0.875rem;
@@ -174,7 +183,7 @@ body {
                         margin-left: $margin-XS/1.5;
                         color: $text;
                         font-size: $size-h4;
-                        &:last-child{
+                        &:last-child {
                             margin-right: 0;
                         }
                         @include mobile-XS() {
@@ -337,11 +346,20 @@ body {
                 display: flex;
                 justify-content: center;
                 margin-bottom: $margin-XS/2;
+                @include mobile-L {
+                    flex-wrap: wrap;
+                }
                 .btn {
                     display: inline-block;
+                    @include mobile-L {
+                        width: 100%;
+                    }
                 }
                 .btn:not(:last-child) {
                     margin-right: $margin-XS/2;
+                    @include mobile-L {
+                        margin-right: 0;
+                    }
                 }
             }
             form {

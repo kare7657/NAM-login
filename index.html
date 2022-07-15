@@ -22,7 +22,7 @@
         }
 
         body .login-body {
-            background-color: unset !important;
+            background-color: transparent !important;
         }
 
         body footer p {
@@ -46,11 +46,23 @@
         }
 
         body .login-body .login-group .login-top .logo {
-            margin-bottom: 12px
+            margin-bottom: 18px;
+            max-width: 230px;
         }
 
         body .login-body .login-group .login-top {
-            margin-bottom: 8px;
+            margin-bottom: 0px;
+        }
+
+        body .login-body .login-group .login-bot label,
+        body .login-body .login-group .login-bot .code-gp label {
+            font-size: 1.25rem;
+            width: 35%;
+        }
+
+        body .login-body .login-group .login-bot input,
+        body .login-body .login-group .login-bot .code-gp .text-gp {
+            width: 65%;
         }
 
         body .login-body .login-group .login-bot .code-gp {
@@ -82,6 +94,36 @@
                 font-size: 2.125rem;
                 letter-spacing: 3px;
             }
+
+            body .login-body .login-group {
+                padding-top: 32px;
+            }
+
+            body .login-body .login-group .login-bot .code-gp {
+                margin-bottom: 24px;
+            }
+
+            body .login-body .login-group .login-bot label,
+            body .login-body .login-group .login-bot .code-gp label {
+                width: 40%;
+            }
+
+            body .login-body .login-group .login-bot input,
+            body .login-body .login-group .login-bot .code-gp .text-gp {
+                width: 60%;
+                flex-wrap: wrap;
+            }
+
+            body .login-body .login-group .login-bot .code-gp .text-gp .code {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+
+            body .login-body .login-group .login-bot .code-gp .text-gp .RP {
+                width: 50%;
+                margin-left: 0;
+            }
         }
     </style>
 </head>
@@ -97,7 +139,7 @@
                 <h4>登入方式</h4>
                 <div class="menu-gp">
                     <a href="#" class="menu-btn active_btn" id="login_btn" title="登入">
-                        系統登入
+                        開機帳號
                     </a>
                     <a href="#" class="menu-btn" id="login_CDC_btn" title="登入">
                         自然人憑證
@@ -116,13 +158,13 @@
                         AD驗證
                     </label>
                 </div> -->
-                <label for="account">帳號</label>
+                <label for="account">帳&emsp;號</label>
                 <input type="text" name="account" id="account">
-                <label for="Password">密碼</label>
+                <label for="Password">密&emsp;碼</label>
                 <input type="password" name="Password" id="Password">
                 <!-- 圖片驗證碼 -->
                 <div class="code-gp">
-                    <label for="code">驗證碼</label>
+                    <label for="code">驗&emsp;證&emsp;碼</label>
                     <div class="text-gp">
                         <input class="code" type="text" name="code" id="code">
                         <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
@@ -141,7 +183,7 @@
                 <input type="text" name="Pin-Code" id="Pin-Code">
                 <!-- 圖片驗證碼 -->
                 <div class="code-gp">
-                    <label for="code2">驗證碼</label>
+                    <label for="code2">驗&emsp;證&emsp;碼</label>
                     <div class="text-gp">
                         <input class="code" type="text" name="code" id="code2">
                         <img class="RP" src="img/RandomPic_ForLogin.jpg" alt="圖片驗證碼">
