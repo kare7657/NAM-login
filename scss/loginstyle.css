@@ -917,6 +917,9 @@ body .apply-account {
   padding-bottom: 0;
   text-align: center;
 }
+body .apply-account .title .logo {
+  width: 200px;
+}
 body .apply-account .container .searchbar {
   display: flex;
   justify-content: flex-end;
