@@ -127,25 +127,26 @@
     //表單
     label {
         width: 25%;
-        height: 30px;
+        // height: 30px;
         font-size: $size-h4;
         color: $text;
         line-height: 30px;
         text-align: left;
         font-weight: bold;
+        margin-bottom: 8px;
         @include mobile-L() {
             width: 30%;
         }
     }
     input {
         width: 75%;
-        height: 30px;
+        // height: 30px;
         line-height: 30px;
         outline: 0;
         border-width: 0 0 2px;
         border-color: #dcdcdd;
         font-size: $size-p;
-        margin-bottom: $margin-XS/1.5;
+        // margin-bottom: $margin-XS/1.5;
         @include mobile-L() {
             width: 70%;
             margin: $margin-XS/1.5 0;
@@ -313,7 +314,7 @@
         padding: 0;
         .modal-dialog {
             max-width: 650px;
-            @include mobile-L(){
+            @include mobile-L() {
                 padding: 0 $padding-XXS;
             }
             .modal-content {
@@ -347,8 +348,8 @@
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
-                        margin-bottom: $margin-XS;
-                        @include mobile-L(){
+                        margin-bottom: $padding-XS;
+                        @include mobile-L() {
                             margin-bottom: $padding-XXS;
                         }
                         label {
@@ -391,8 +392,8 @@
                         @include web-S {
                             justify-content: start;
                         }
-                        @include mobile-L(){
-                        margin-bottom: $margin-S;
+                        @include mobile-L() {
+                            margin-bottom: $margin-S;
                         }
                         label {
                             width: 30%;
@@ -589,7 +590,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-        margin-bottom: $margin-XS;
+        margin-bottom: $padding-XS;
         text-align: left;
         .w50 {
             width: 50%;
@@ -598,6 +599,9 @@
             }
             @include mobile-L() {
                 width: 100%;
+                &:not(:last-child) {
+                    padding-right: 0;
+                }
             }
         }
         .tel {
@@ -612,8 +616,42 @@
             .w20 {
                 width: 20%;
             }
+
             span {
                 color: $gray;
+            }
+        }
+        .mail {
+            width: 100%;
+            display: flex;
+            @include mobile-L() {
+                flex-wrap: wrap;
+            }
+            .w40 {
+                width: 40%;
+                @include mobile-L() {
+                    width: 50%;
+                }
+                @include mobile-XS(){
+                    width: 100%;
+                }
+            }
+            .w60 {
+                width: 60%;
+                @include mobile-L() {
+                    width: 50%;
+                }
+                @include mobile-XS(){
+                    width: 100%;
+                }
+            }
+            p {
+                padding-left: $padding-XXS;
+
+                @include mobile-XS(){
+                    padding: 0;
+                    margin-bottom: $padding-XXS;
+                }
             }
         }
         p {

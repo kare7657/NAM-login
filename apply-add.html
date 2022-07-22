@@ -227,6 +227,13 @@
                     <input type="email" name="email" id="email">
                 </div>
                 <div class="form-gp">
+                    <label for="email-default">預設Email<span>*</span></label>
+                    <div class="mail">
+                        <input type="email" class="w40" name="email-default" id="email-default">
+                        <p class="w60">@taichung.gov.tw</p>
+                    </div>
+                </div>
+                <div class="form-gp">
                     <label for="tel">聯絡電話<span>*</span></label>
                     <div class="tel">
                         <input type="tel" name="tel" id="tel" class="w20" placeholder="00">
@@ -257,6 +264,10 @@
                 <div class="form-gp">
                     <label for="cell-phone">手機<span>*</span></label>
                     <input type="tel" name="cell-phone" id="cell-phone" placeholder="0911222333">
+                </div>
+                <div class="form-gp">
+                    <label for="download">檔案下載<span>*</span></label>
+                    <input type="file" name="download" id="download">
                 </div>
                 <div class="form-submit">
                     <div class="btn-gp">
@@ -350,8 +361,22 @@
     <!-- JQ datepicker -->
     <script>
         $(document).ready(function () {
-            $(".chinese-date").datepicker({ changeYear: true, changeMonth: true, currentText: "Now", dateFormat: "Rmmdd", showButtonPanel: false });
-            $(".western-date").datepicker({ changeYear: true, changeMonth: true, currentText: "Now", dateFormat: "yy-mm-dd", showButtonPanel: false });
+            $(".chinese-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "Rmmdd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
+            $(".western-date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                currentText: "Now",
+                dateFormat: "yy/mm/dd",
+                showButtonPanel: false,
+                yearRange: "1930:2060",
+            });
         });
         //將.datepicker改成民國年與西元年小套件同時存在
         $(function (datepicker) {
