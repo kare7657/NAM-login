@@ -126,8 +126,8 @@
     }
     //表單
     label {
-        width: 25%;
-        // height: 30px;
+        width: 30%;
+        height: 30px;
         font-size: $size-h4;
         color: $text;
         line-height: 30px;
@@ -135,22 +135,25 @@
         font-weight: bold;
         margin-bottom: 8px;
         @include mobile-L() {
-            width: 30%;
+            width: 34%;
         }
     }
     input {
-        width: 75%;
-        // height: 30px;
+        width: 70%;
+        height: 30px;
         line-height: 30px;
+        margin-bottom: $margin-XS/1.5;
         outline: 0;
         border-width: 0 0 2px;
         border-color: #dcdcdd;
         font-size: $size-p;
-        // margin-bottom: $margin-XS/1.5;
         @include mobile-L() {
-            width: 70%;
+            width: 66%;
             margin: $margin-XS/1.5 0;
             margin-top: 0;
+        }
+        @include mobile-XS(){
+            width: 60%;
         }
         &[type="submit"],
         &[type="reset"],
@@ -632,7 +635,7 @@
                 @include mobile-L() {
                     width: 50%;
                 }
-                @include mobile-XS(){
+                @include mobile-XS() {
                     width: 100%;
                 }
             }
@@ -641,14 +644,14 @@
                 @include mobile-L() {
                     width: 50%;
                 }
-                @include mobile-XS(){
+                @include mobile-XS() {
                     width: 100%;
                 }
             }
             p {
                 padding-left: $padding-XXS;
 
-                @include mobile-XS(){
+                @include mobile-XS() {
                     padding: 0;
                     margin-bottom: $padding-XXS;
                 }
@@ -798,6 +801,63 @@
         label span {
             color: $red;
             margin-left: 3px;
+        }
+    }
+    .form-gp-headshot {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include mobile-L() {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+        .input-gp {
+            width: calc(100% - 170px);
+            margin-right: $margin-S;
+            @include mobile-L() {
+                width: 100%;
+            }
+        }
+        .headshot-gp {
+            text-align: right;
+            width: 140px;
+            @include mobile-L() {
+                text-align: center;
+                width: 100%;
+                margin-bottom: $margin-XS;
+            }
+            img.headshot {
+                object-fit: contain;
+                width: 140px;
+                border-radius: 8px;
+                @include mobile-L() {
+                    width: 160px;
+                    margin-top: 0;
+                }
+                @include mobile-XS() {
+                    width: 130px;
+                }
+            }
+            .btn {
+                width: 140px;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                @include mobile-L() {
+                    margin: auto;
+                    width: 160px;
+                }
+                @include mobile-XS() {
+                    width: 130px;
+                }
+                .more {
+                    width: 46%;
+                    text-align: center;
+                    margin-top: $padding-XXS;
+                    padding: 0;
+                }
+            }
         }
     }
 }

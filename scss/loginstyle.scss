@@ -205,27 +205,35 @@ body {
                         margin-bottom: $margin-XS;
                     }
                     label {
-                        width: 25%;
+                        width: 30%;
                         text-align: left;
                         @include mobile-L() {
-                            width: 30%;
+                            width: 34%;
+                        }
+                        @include mobile-XS {
+                            width: 40%;
                         }
                     }
 
                     .text-gp {
-                        width: 75%;
+                        width: 70%;
                         display: flex;
                         align-items: center;
                         @include mobile-L() {
-                            width: 70%;
+                            width: 66%;
+                        }
+                        @include mobile-XS {
+                            width: 60%;
+                            flex-wrap: wrap;
                         }
                         .code {
                             width: 40%;
                             margin-right: 10px;
                             margin-bottom: 0;
                             @include mobile-XS() {
-                                width: 50%;
+                                width: 100%;
                                 margin-right: 0;
+                                margin-bottom: $padding-XXS;
                             }
                         }
                         .RP {
@@ -239,11 +247,11 @@ body {
                                 height: 30px;
                             }
                             @include mobile-L() {
-                                width: 30%;
+                                width: 40%;
                                 height: unset;
                             }
                             @include mobile-XS() {
-                                margin-left: $margin-XS;
+                                width: 50%;
                             }
                         }
                         .reform {
@@ -338,8 +346,8 @@ body {
         padding: $padding-XS/1.5 0;
         padding-bottom: 0;
         text-align: center;
-        .title{
-            .logo{
+        .title {
+            .logo {
                 width: 200px;
             }
         }
@@ -356,9 +364,9 @@ body {
                 }
                 .btn {
                     display: inline-block;
-                    @include mobile-L {
-                        width: 100%;
-                    }
+                    // @include mobile-L {
+                    //     width: 100%;
+                    // }
                 }
                 .btn:not(:last-child) {
                     margin-right: $margin-XS/2;
@@ -369,6 +377,11 @@ body {
             }
             form {
                 @include form();
+                .form-gp {
+                    input {
+                        height: initial;
+                    }
+                }
             }
         }
     }
