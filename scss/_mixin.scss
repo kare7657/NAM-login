@@ -133,9 +133,12 @@
         line-height: 30px;
         text-align: left;
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 0;
         @include mobile-L() {
             width: 34%;
+        }
+        @include mobile-XS() {
+            width: 40%;
         }
     }
     input {
@@ -152,7 +155,7 @@
             margin: $margin-XS/1.5 0;
             margin-top: 0;
         }
-        @include mobile-XS(){
+        @include mobile-XS() {
             width: 60%;
         }
         &[type="submit"],
@@ -313,7 +316,7 @@
     }
 
     //modal
-    .modal-template {
+    .modal {
         padding: 0;
         .modal-dialog {
             max-width: 650px;
@@ -326,7 +329,7 @@
                     width: 100%;
                     border-bottom: none;
                     padding: 0;
-                    margin: $margin-S 0;
+                    margin: $margin-XS 0;
                     .modal-title {
                         width: 100%;
                         text-align: center;
@@ -337,12 +340,17 @@
                         right: 16px;
                         background-color: transparent !important;
                         color: $text !important;
+                        padding: 0;
+                        span {
+                            padding: $padding-XXS 15px;
+                        }
                     }
                 }
                 .modal-body {
                     width: 100%;
                     margin: auto;
                     padding: 0 $padding-S;
+                    margin-bottom: $margin-XS;
                     @include mobile-L() {
                         padding: 0 $padding-XS;
                     }
@@ -474,9 +482,11 @@
                         display: flex;
                         flex-direction: column;
                         padding: 0 $padding-XS;
-                        button {
+                    }
+                    button {
+                        margin-top: 0;
+                        @include mobile-L() {
                             width: 100%;
-                            margin: 0;
                             &:not(:first-child) {
                                 margin-top: $margin-S;
                                 @include mobile-L {

@@ -252,6 +252,7 @@ body {
                             }
                             @include mobile-XS() {
                                 width: 50%;
+                                margin-top: 6px;
                             }
                         }
                         .reform {
@@ -380,6 +381,13 @@ body {
                 .form-gp {
                     input {
                         height: initial;
+                    }
+                }
+                .form-submit{
+                    button{
+                        @include mobile-L{
+                            width: 100%;
+                        }
                     }
                 }
             }
